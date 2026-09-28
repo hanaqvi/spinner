@@ -1,31 +1,17 @@
-import { useEffect, useState } from 'react'
+import CallButton from './components/CallButton'
+import CallDisplay from './components/CallDisplay'
 
-import { supabase } from './lib/supabaseClient'
+import { useState } from 'react';
 
 function App() {
-  const [instruments, setInstruments] = useState([])
 
-  useEffect(() => {
-    getInstruments()
-  }, [])
-
-  async function getInstruments() {
-    const { data, error } = await supabase.from('instruments').select()
-
-    if (error) {
-      console.error(error)
-      return
-    }
-
-    setInstruments(data)
-  }
+  const [apiData, setApiData] = useState(null);
 
   return (
-    <ul>
-      {instruments.map((instrument) => (
-        <li key={instrument.id}>{instrument.name}</li>
-      ))}
-    </ul>
+    <>
+      <CallButton onDataFetched={setApiData} />
+      <CallDisplay data={apiData} />
+    </>
   )
 }
 
