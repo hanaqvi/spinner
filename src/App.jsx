@@ -12,8 +12,10 @@ function App() {
   return (
     <>
       <SearchBar onSearch={console.log("hello")} />
-      <CallButton onDataFetched={setApiData} />
-      <CallDisplay data={apiData} />
+
+      {/* <CallButton onDataFetched={setApiData} />
+      <CallDisplay data={apiData} /> */}
+
     </>
   )
 }
