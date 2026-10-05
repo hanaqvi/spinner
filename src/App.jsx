@@ -1,22 +1,23 @@
-import CallButton from './components/CallButton'
-import CallDisplay from './components/CallDisplay'
-import SearchBar from './components/SearchBar/SearchBar';
 import "./App.css";
 
-import { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import Navbar from "./components/Navbar/Navbar";
+import Home from './pages/Home'
+import SearchResults from "./pages/SearchResults";
 
 function App() {
 
-  const [apiData, setApiData] = useState(null);
-
   return (
-    <>
-      <SearchBar onSearch={console.log("hello")} />
+    <BrowserRouter>
 
-      {/* <CallButton onDataFetched={setApiData} />
-      <CallDisplay data={apiData} /> */}
+      <Navbar />
 
-    </>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/search-results" element={<SearchResults />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
