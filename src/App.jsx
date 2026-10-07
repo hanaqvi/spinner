@@ -3,8 +3,8 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Navbar from "./components/Navbar/Navbar";
-import Home from './pages/Home'
-import SearchResults from "./pages/SearchResults";
+import Home from './pages/Home/Home'
+import SearchResults from "./pages/SearchResults/SearchResults";
 
 function App() {
 

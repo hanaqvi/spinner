@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import SearchList from '../components/SearchBar/SearchList';
-import { searchMusic } from '../api';
+import SearchList from '../../components/SearchBar/SearchList'
+import { searchMusic } from '../../api';
 
 export default function SearchResults() {
     // 1. Initialize the hook
