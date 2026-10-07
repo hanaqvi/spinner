@@ -1,4 +1,6 @@
 import { useNavigate } from 'react-router-dom';
+import styles from './HomeButton.module.css';
+import logo from '../../assets/logo.png';
 
 export default function HomeButton() {
 
@@ -10,8 +12,8 @@ export default function HomeButton() {
 
 
     return (
-        <>
-            <button onClick={handleClick}>Home</button>
-        </>
+        <button className={styles.homeButton} onClick={handleClick} aria-label="Home">
+            Spinner
+        </button>
     )
 }

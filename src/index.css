@@ -1,7 +1,16 @@
-/* index.css */
+/* index.css — global styles and the colors used across the whole app.
+   Change a color here and it changes everywhere that uses var(--name). */
 :root {
   --bg-color: #121212;
+  /* page background */
+  --surface-color: #1a1a1a;
+  /* things that sit on the page (navbar, cards) */
+  --hover-color: #262626;
+  /* hover state for buttons on a surface */
+  --border-color: #2c2c2c;
+  /* thin dividing lines */
   --text-primary: #ffffff;
+  --text-muted: #8a8a94;
   --accent-color: #1db954;
 }
 

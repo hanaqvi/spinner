@@ -8,6 +8,7 @@ export default function Navbar() {
         <ul className={styles.navbarList}>
             <li><HomeButton /></li>
             <li><SearchBar /></li>
+            <li className='spacer'></li>
         </ul>
     )
 }
