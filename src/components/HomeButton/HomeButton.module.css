@@ -1,0 +1,71 @@
+/* HomeButton.module.css — the "Spinner" logo */
+.homeButton {
+    font-family: "Limelight", sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1;
+    color: var(--text-primary);
+
+    /* strip the default grey button look */
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    /* lay out the little record and the word side by side */
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.15s ease;
+}
+
+/* A tiny vinyl record drawn with pure CSS (no image needed).
+   Concentric green rings, with a hole in the middle. */
+.homeButton::before {
+    content: "";
+    width: 0.9em;
+    height: 0.9em;
+    border-radius: 50%;
+    background:
+        radial-gradient(circle, var(--bg-color) 0 12%, var(--accent-color) 13% 34%, transparent 35%),
+        repeating-radial-gradient(circle, #222 0 2px, #2c2c2c 2px 4px);
+    border: 1px solid #000;
+    flex-shrink: 0;
+}
+
+.homeButton:hover {
+    background-color: var(--hover-color);
+}
+
+/* On hover, the record spins. The word "Spinner" earns its name. */
+.homeButton:hover::before {
+    animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Keyboard users get a clear outline when tabbing to the button */
+.homeButton:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* If someone has "reduce motion" turned on in their system, don't spin */
+@media (prefers-reduced-motion: reduce) {
+    .homeButton:hover::before {
+        animation: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .homeButton {
+        font-size: 22px;
+        padding: 6px 8px;
+    }
+}

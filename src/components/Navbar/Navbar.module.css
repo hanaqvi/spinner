@@ -1,18 +1,40 @@
+/* Navbar.module.css
+   The navbar is a grid with three columns:
+   [ logo ............ ] [ search bar ] [ ............ empty ]
+   The two outer columns are equal ("1fr"), which keeps the search bar
+   centered no matter how wide the logo is. */
 .navbarList {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: #333333;
-    display: flex;
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 480px) 1fr;
+    align-items: center;
+    gap: 16px;
+
+    padding: 8px 20px;
+    background-color: var(--surface-color);
+    border-bottom: 1px solid var(--border-color);
+
+    /* keeps the navbar visible while the page scrolls */
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
-.navbarItem {
-    display: block;
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
+/* the first list item (logo) hugs the left edge */
+.navbarList>li:first-child {
+    justify-self: start;
 }
 
-.navbarItem:hover {
-    background-color: #d4d1d1;
+/* lets the search bar shrink on small screens instead of overflowing */
+.navbarList>li {
+    min-width: 0;
+}
+
+/* Small screens: tighten the spacing */
+@media (max-width: 700px) {
+    .navbarList {
+        padding: 8px 12px;
+        gap: 8px;
+    }
 }
