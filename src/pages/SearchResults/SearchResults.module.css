@@ -1,0 +1,7 @@
+.resultsBox {
+    width: 80%px;
+    padding: 50px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+}

@@ -11,6 +11,8 @@
     align-items: center;
     gap: 16px;
 
+    /* Change this to flex later */
+
     padding: 8px 20px;
     background-color: var(--surface-color);
     border-bottom: 1px solid var(--border-color);

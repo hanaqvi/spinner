@@ -3,6 +3,8 @@ import { useSearchParams } from 'react-router-dom';
 import SearchList from '../../components/SearchBar/SearchList'
 import { searchMusic } from '../../api';
 
+import styles from './SearchResults.module.css';
+
 export default function SearchResults() {
     // 1. Initialize the hook
     const [searchParams] = useSearchParams();
@@ -31,7 +33,7 @@ export default function SearchResults() {
     }, [query]);
 
     return (
-        <div>
+        <div className={styles.resultsBox}>
             {/* 3. Display the query on screen */}
             <h1>Search Results for: {query}</h1>
             <SearchList searchResults={results} />

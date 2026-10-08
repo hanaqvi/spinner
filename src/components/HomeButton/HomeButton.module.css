@@ -39,10 +39,7 @@
     background-color: var(--hover-color);
 }
 
-/* On hover, the record spins. The word "Spinner" earns its name. */
-.homeButton:hover::before {
-    animation: spin 1.2s linear infinite;
-}
+
 
 @keyframes spin {
     to {
