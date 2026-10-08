@@ -4,7 +4,6 @@ import { useDebounce } from "use-debounce";
 
 import './SearchBar.css';
 import { searchMusic } from '../../api';
-import SearchList from './SearchList';
 
 // need to change this function entirely to read database search caches
 // only make database request upon actually submitting the search, but autocomplete cached
@@ -111,8 +110,6 @@ export default function SearchBar({ placeholder = 'Search artists, albums, songs
           <kbd className="search-hint" aria-hidden="true">/</kbd>
         )}
       </form>
-
-      <SearchList searchResults={results} />
     </>
   );
 }
