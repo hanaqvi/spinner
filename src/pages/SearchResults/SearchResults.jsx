@@ -35,7 +35,7 @@ export default function SearchResults() {
     return (
         <div className={styles.contentArea}>
             {/* 3. Display the query on screen */}
-            <h1>Search Results for: {query}</h1>
+            <h1>Search Results For: {query}</h1>
             <SearchList searchResults={results} />
         </div>
     );
