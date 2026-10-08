@@ -1,7 +1,11 @@
-.resultsBox {
-    width: 80%px;
-    padding: 50px;
-    margin: 0px;
-    display: flex;
-    flex-direction: column;
+.contentArea {
+    width: 50%;
+    /* Fallback minimum so lines don't get unreadably narrow on small screens */
+    min-width: 280px;
+    max-width: 100%;
+
+    text-align: left;
+    padding-left: 15rem;
+    margin-top: 25px;
+    box-sizing: border-box;
 }

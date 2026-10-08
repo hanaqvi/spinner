@@ -33,7 +33,7 @@ export default function SearchResults() {
     }, [query]);
 
     return (
-        <div className={styles.resultsBox}>
+        <div className={styles.contentArea}>
             {/* 3. Display the query on screen */}
             <h1>Search Results for: {query}</h1>
             <SearchList searchResults={results} />
