@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import SearchList from '../../components/SearchBar/SearchList'
+import SearchList from '../../components/SearchList/SearchList'
 import { searchMusic } from '../../api';
 
 import styles from './SearchResults.module.css';
