@@ -2,17 +2,17 @@ import styles from './SearchList.module.css';
 // import CoverArt from "../CoverArt/CoverArt";
 import ReleaseCard from "../ReleaseCard/ReleaseCard";
 
-export default function SearchList({ searchResults }) {
+export default function SearchList({ searchResults, onHover }) {
     const releases = searchResults?.releases;
 
     if (!releases) return null;
 
     return (
-        <ul className={styles.resultsList}>
+        <ul className={styles.resultsList} onMouseLeave={() => onHover(null)}>
             {releases.map((release) => {
                 const artist = release["artist-credit"]?.[0]?.name || "Unknown artist";
                 return (
-                    <ReleaseCard key={release.id} release={release} artist={artist} />
+                    <ReleaseCard key={release.id} release={release} artist={artist} onHover={onHover} />
                 )
             })}
         </ul>

@@ -1,0 +1,7 @@
+.preview {
+    position: sticky;
+    top: 80px;
+    /* just below your navbar */
+    width: 400px;
+    flex-shrink: 0;
+}

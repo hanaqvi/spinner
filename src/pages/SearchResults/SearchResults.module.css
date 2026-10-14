@@ -22,3 +22,11 @@
         padding-right: 0;
     }
 }
+
+/* SearchResults.module.css */
+.layout {
+    display: flex;
+    align-items: flex-start;
+    /* required for sticky to work */
+    gap: 32px;
+}

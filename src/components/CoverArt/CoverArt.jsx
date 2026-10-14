@@ -13,7 +13,7 @@ export default function CoverArt({ releaseId, alt = "Album cover", size = 100 })
                 <span className={styles.placeholder} aria-label={alt}>♪</span>
             ) : (
                 <img
-                    src={`https://coverartarchive.org/release/${releaseId}/front-250`}
+                    src={`https://coverartarchive.org/release/${releaseId}/front-500`}
                     alt={alt}
                     loading="lazy"
                     className={styles.coverImage}
