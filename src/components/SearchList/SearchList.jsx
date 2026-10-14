@@ -8,7 +8,7 @@ export default function SearchList({ searchResults, onHover }) {
     if (!releases) return null;
 
     return (
-        <ul className={styles.resultsList} onMouseLeave={() => onHover(null)}>
+        <ul className={styles.resultsList}>
             {releases.map((release) => {
                 const artist = release["artist-credit"]?.[0]?.name || "Unknown artist";
                 return (

@@ -27,6 +27,7 @@ export default function SearchResults() {
 
             console.log("Fetching results for:", query);
             fetchData();
+            setHovered(null);
 
         }
     }, [query]);
