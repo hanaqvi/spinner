@@ -1,5 +1,6 @@
 import styles from './SearchList.module.css';
-import CoverArt from "../CoverArt/CoverArt";
+// import CoverArt from "../CoverArt/CoverArt";
+import ReleaseCard from "../ReleaseCard/ReleaseCard";
 
 export default function SearchList({ searchResults }) {
     const releases = searchResults?.releases;
@@ -10,19 +11,9 @@ export default function SearchList({ searchResults }) {
         <ul className={styles.resultsList}>
             {releases.map((release) => {
                 const artist = release["artist-credit"]?.[0]?.name || "Unknown artist";
-
                 return (
-                    <li key={release.id} className={styles.albumCard}>
-                        <CoverArt
-                            releaseId={release.id}
-                            alt={`${release.title} by ${artist}`}
-                        />
-                        <div className={styles.info}>
-                            <span className={styles.title}>{release.title}</span>
-                            <span className={styles.artist}>{artist}</span>
-                        </div>
-                    </li>
-                );
+                    <ReleaseCard key={release.id} release={release} artist={artist} />
+                )
             })}
         </ul>
     );

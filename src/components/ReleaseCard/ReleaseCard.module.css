@@ -1,0 +1,39 @@
+.albumCard {
+    display: flex;
+    gap: 16px;
+    box-sizing: border-box;
+    padding: 20px 20px 20px 26px;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.albumCard:hover {
+    background-color: #262626
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+    /* lets ellipsis work inside flex */
+}
+
+.title {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.artist {
+    color: #a0a0a0;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
