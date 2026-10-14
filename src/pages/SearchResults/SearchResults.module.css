@@ -17,7 +17,6 @@
 /* Desktop */
 @media (min-width: 1100px) {
     .contentArea {
-        width: 60%;
         padding-left: 15rem;
         padding-right: 0;
     }
@@ -29,4 +28,5 @@
     align-items: flex-start;
     /* required for sticky to work */
     gap: 32px;
+    margin-top: 8px;
 }

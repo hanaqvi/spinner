@@ -6,4 +6,8 @@
     flex-direction: column;
     gap: 10px;
     margin-top: 0.5rem;
+
+    flex: 0 1 900px;
+    /* prefers 900px, shrinks if there isn't room */
+    min-width: 0;
 }
