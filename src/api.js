@@ -30,6 +30,8 @@ async function searchArtistById(mbid) {
             },
         }
     )
+    if (!res.ok) throw new Error("Search failed");
+    return res.json();
 }
 
 async function getCoverArt(mbid) {

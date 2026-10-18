@@ -1,5 +1,4 @@
 import styles from './SearchList.module.css';
-// import CoverArt from "../CoverArt/CoverArt";
 import ReleaseCard from "../ReleaseCard/ReleaseCard";
 
 export default function SearchList({ searchResults, onHover }) {
