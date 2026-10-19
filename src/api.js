@@ -20,6 +20,7 @@ async function searchMusic(query, type = "artist") {
 async function searchArtistById(mbid) {
 
     const FUNCTION_URL = "https://hazqkvbaorrslknnmpbn.supabase.co/functions/v1/get-artist-by-id";
+    console.log('FETHC');
 
     const res = await fetch(
         `${FUNCTION_URL}/?mbid=${mbid}`,
