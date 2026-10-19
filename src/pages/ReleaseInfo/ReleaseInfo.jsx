@@ -3,6 +3,7 @@ import { searchArtistById } from "../../api";
 
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import CoverArt from '../../components/CoverArt/CoverArt';
 
 export default function ReleaseInfo() {
     const { mbid } = useParams();
@@ -26,9 +27,16 @@ export default function ReleaseInfo() {
     if (error) return <p>Something went wrong loading this release.</p>;
     if (!release) return <p>Loading...</p>;
 
+    const artist = release["artist-credit"]?.[0]?.name || "Unknown artist";
+
     return (
         <div>
+            <CoverArt
+                releaseId={release.id}
+                alt={`${release.title} by ${artist}`}
+            />
             <h1>{release.title}</h1>
+            <p>{artist}</p>
         </div>
     );
 }
