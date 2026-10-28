@@ -1,7 +1,32 @@
-.resultsBox {
-    width: 80%px;
-    padding: 50px;
-    margin: 0px;
+.contentArea {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 25px;
+    padding: 0 16px;
+}
+
+
+/* Tablet */
+@media (min-width: 768px) {
+    .contentArea {
+        padding-left: 5rem;
+        padding-right: 2rem;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1100px) {
+    .contentArea {
+        padding-left: 15rem;
+        padding-right: 0;
+    }
+}
+
+/* SearchResults.module.css */
+.layout {
     display: flex;
-    flex-direction: column;
+    align-items: flex-start;
+    /* required for sticky to work */
+    gap: 32px;
+    margin-top: 8px;
 }

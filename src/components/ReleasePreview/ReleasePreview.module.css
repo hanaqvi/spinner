@@ -1,0 +1,12 @@
+.preview {
+    position: sticky;
+    top: 80px;
+    width: 400px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 1099px) {
+    .preview {
+        display: none;
+    }
+}

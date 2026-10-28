@@ -20,6 +20,24 @@ async function searchMusic(query, type = "artist") {
 async function searchArtistById(mbid) {
 
     const FUNCTION_URL = "https://hazqkvbaorrslknnmpbn.supabase.co/functions/v1/get-artist-by-id";
+    console.log('FETHC');
+
+    const res = await fetch(
+        `${FUNCTION_URL}/?mbid=${mbid}`,
+        {
+            headers: {
+                Authorization: `Bearer ${ANON_KEY}`,
+                apikey: ANON_KEY,
+            },
+        }
+    )
+    if (!res.ok) throw new Error("Search failed");
+    return res.json();
+}
+
+async function getCoverArt(mbid) {
+
+    const FUNCTION_URL = "https://hazqkvbaorrslknnmpbn.supabase.co/functions/v1/get-cover-art";
 
     const res = await fetch(
         `${FUNCTION_URL}/?mbid=${mbid}`,
@@ -32,4 +50,4 @@ async function searchArtistById(mbid) {
     )
 }
 
-export { searchMusic, searchArtistById }
+export { searchMusic, searchArtistById, getCoverArt }

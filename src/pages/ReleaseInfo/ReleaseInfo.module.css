@@ -1,0 +1,83 @@
+.contentArea {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 100dvh;
+    width: 100%;
+    max-width: 960px;
+    margin-inline: auto;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 0.5rem;
+    padding-top: 30px;
+}
+
+.title {
+    line-height: 1;
+}
+
+.artist {
+    opacity: 0.75;
+}
+
+.tracklist {
+    align-self: stretch;
+}
+
+.tracks {
+    list-style: none;
+}
+
+.track {
+    display: grid;
+    grid-template-columns: 0.5rem 1fr auto;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 0.5rem;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.25);
+}
+
+
+.trackNumber {
+    text-align: right;
+    opacity: 0.6;
+    font-variant-numeric: tabular-nums;
+}
+
+.trackTitle {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.trackLength {
+    opacity: 0.6;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Stack the cover above the text on narrow screens */
+@media (max-width: 640px) {
+    .header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .details {
+        padding-top: 0;
+    }
+}
